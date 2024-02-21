@@ -4,7 +4,7 @@ let prev = document.getElementById('prev')
 let btn = document.querySelector('.contact-button')
 let aftercontact = document.querySelector('.contact-container')
 let counter = 0;
-const images = ["/attachments/1.webp","/attachments/2.webp","/attachments/3.webp"]
+const images = ["attachments/1.webp","attachments/2.webp","attachments/3.webp"]
 
 setTimeout(() => {
     const links = document.querySelectorAll("nav li");
@@ -41,7 +41,7 @@ document.querySelector('header').innerHTML = `<div  class="nav-container">
 </div>`
 
 document.querySelector('footer').innerHTML = `<footer>
-<img src="/attachments/vinland-saga.png" class="vinland" alt="Logo Vinland Saga">
+<img src="attachments/vinland-saga.png" class="vinland" alt="Logo Vinland Saga">
 </footer>`
 
 next.addEventListener("click", (e) => {
