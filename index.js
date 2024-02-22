@@ -1,9 +1,7 @@
 // Attendez que la page soit entièrement chargée
 window.addEventListener('load', () => {
-    // Obtenez les références des éléments suivant et précédent
-    let next = document.getElementById('next')
-    let prev = document.getElementById('prev')
-    let btn = document.querySelector('.contact-button')
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
 
     // Un compteur pour suivre l'index des images
     let counter = 0;
