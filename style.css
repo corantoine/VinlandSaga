@@ -130,15 +130,14 @@ li {
 }
 
 a,
-a:visited {
-    
+a:visited { 
     color: rgb(177, 25, 25);
     text-decoration: none;
     font-weight: bolder;
 }
 
 a:hover {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 nav {
@@ -245,7 +244,7 @@ nav ul {
   .boutique-button {
     display: inline-block;
     background-color: #007bff;
-    padding: 5px 12px;
+    padding: 8px 14px;
     text-decoration: none;
     margin-top: 1em;
     border-radius: 5px;
@@ -394,6 +393,7 @@ section#contact .contact-container textarea {
      font-size: 2rem;
      margin-left: 3%;
      margin-right: 3%;
+     padding-bottom: 20px;
  }
  
  iframe {
