@@ -1,13 +1,16 @@
 // Attendez que la page soit entièrement chargée
 window.addEventListener('load', () => {
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let boutiquebtn = document.querySelector('.boutique-button');
+    let choix = document.querySelector('.search-control');
+    let selectedValue = "";
 
     // Un compteur pour suivre l'index des images
     let counter = 0;
 
     // Tableau contenant les chemins des images
-    const images = ["attachments/1.webp","attachments/2.webp","attachments/3.webp"]
+    const images = ["attachments/1.webp", "attachments/2.webp", "attachments/3.webp"];
 
     // Attendez 2 secondes, puis activez le "NavBar"
     setTimeout(() => {
@@ -15,18 +18,18 @@ let prev = document.getElementById('prev');
         const links = document.querySelectorAll("nav li");
         const icons = document.getElementById("icons");
         const nav = document.getElementById("nav");
-        
+
         // "Toggle" la classe "active" du "NavBar" lorsque les icônes sont cliquées
         icons.addEventListener("click", () => {
             nav.classList.toggle("active");
         });
-        
+
         // Retirez la classe "active" du "NavBar" lorsqu'un lien est cliqué
         links.forEach((link) => {
-            link.addEventListener("click", () =>{
-                nav.classList.remove("active")
-            })
-        })
+            link.addEventListener("click", () => {
+                nav.classList.remove("active");
+            });
+        });
     }, 2000);
 
     // Injecter le contenu de "Header" avec des liens de navigation et des icônes
@@ -46,14 +49,23 @@ let prev = document.getElementById('prev');
             </ul>
             <div id="icons"></div>
         </nav>
-    </div>`
+    </div>`;
 
     // Injecter le contenu HTML du "Footer" avec le logo Vinland Saga
     document.querySelector('footer').innerHTML = `<footer>
         <img src="attachments/vinland-saga.png" class="vinland" alt="Logo Vinland Saga">
-    </footer>`
+    </footer>`;
 
-    // Vérifiez si les éléments next et prev existent avant d'ajouter des écouteurs d'événements, si non on aura cette error message "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" à chaque page.
+    // Écouteur d'événements pour le "choix"
+    choix.addEventListener("change", (e) => {
+        selectedValue = e.currentTarget.value;
+    })
+
+    boutiquebtn.addEventListener("click", (e) => {
+        const selectedCard = document.getElementById(selectedValue);
+        selectedCard.classList.add("active")
+    })
+    // Vérifiez si les éléments next et prev existent avant d'ajouter des écouteurs d'événements
     if (next && prev) {
         // Écouteur d'événements pour le bouton suivant
         next.addEventListener("click", (e) => {
@@ -76,5 +88,6 @@ let prev = document.getElementById('prev');
             }
             document.getElementById('slider').src = images[counter];
         })
+
     }
 });

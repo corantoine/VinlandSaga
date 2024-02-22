@@ -177,6 +177,14 @@ nav ul {
   padding: 100px 0;
 }
 
+.cards-container > .product-card {
+    display: none;
+}
+
+.cards-container > .product-card.active {
+    display: block;
+}
+
 .cards-container {
     max-width: 1200px;
     margin: 0 auto;
