@@ -57,6 +57,7 @@ window.addEventListener('load', () => {
     </footer>`;
 
     // Écouteur d'événements pour le "choix"
+    if(choix && boutiquebtn) {
     choix.addEventListener("change", (e) => {
         selectedValue = e.currentTarget.value;
     })
@@ -65,6 +66,7 @@ window.addEventListener('load', () => {
         const selectedCard = document.getElementById(selectedValue);
         selectedCard.classList.add("active")
     })
+    }
     // Vérifiez si les éléments next et prev existent avant d'ajouter des écouteurs d'événements
     if (next && prev) {
         // Écouteur d'événements pour le bouton suivant
