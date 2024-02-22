@@ -242,6 +242,33 @@ nav ul {
     background-color: #0056b3;
   }
 
+  .boutique-button {
+    display: inline-block;
+    background-color: #007bff;
+    padding: 5px 12px;
+    text-decoration: none;
+    margin-top: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    color: white;
+    border: none;
+  }
+
+  .boutique-button:hover {
+    background-color: #0056b3;
+  }
+
+  .search-control {
+    margin-top: 1em;
+    border-radius: 40px;
+    border: 1px solid black;
+    padding: 2px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 /************************* FOOTER *************************/
 footer {
     display: flex;
